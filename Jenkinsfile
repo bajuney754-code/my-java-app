@@ -1,11 +1,12 @@
 pipeline {
   agent any
   tools {
-    maven Maven 3.9.16  // name doesn't matter, Jenkins will use system maven
+    maven "${env.MVN_VERSION}"// name doesn't matter, Jenkins will use system maven
   }
   environment {
     NEXUS_URL = 'http://nexus:8081'
     SONAR_URL = 'http://sonarqube:9000'
+    MVN_VERSION = '3.9.9'
   }
   stages {
     stage('Checkout') {
