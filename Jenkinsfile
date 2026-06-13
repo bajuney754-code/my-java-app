@@ -1,11 +1,12 @@
 pipeline {
   agent any
   tools {
-      maven '3.9.16'
+      maven "${env.MVN_VERSION}"
   }
   environment {
     NEXUS_URL = 'http://nexus:8081'
     SONAR_URL = 'http://sonarqube:9000'
+    MVN_VERSION = '3.9.9'
   }
   stages {
     stage('Checkout') {
