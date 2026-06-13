@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven 'Maven-3.9.16'  // name doesn't matter, Jenkins will use system maven
+    Maven 'Maven-3.9.16'  // name doesn't matter, Jenkins will use system maven
   }
   environment {
     NEXUS_URL = 'http://nexus:8081'
